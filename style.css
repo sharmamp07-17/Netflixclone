@@ -1,0 +1,514 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu,
+    sans-serif;
+}
+
+body {
+  background: #000;
+  color: aliceblue;
+}
+
+.container {
+  margin: auto 8%;
+  padding: 0 2%;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+ul {
+  list-style: none;
+}
+
+header {
+  width: 100%;
+  background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8) 0,
+      rgba(0, 0, 0, 0) 60%,
+      rgba(0, 0, 0, 0.8) 100%
+    ),
+    url(https://assets.nflxext.com/ffe/siteui/vlv3/a73c4363-1dcd-4719-b3b1-3725418fd91d/fe1147dd-78be-44aa-a0e5-2d2994305a13/IN-en-20231016-popsignuptwoweeks-perspective_alpha_website_small.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  margin: auto;
+  border-bottom: 8px solid rgb(57, 57, 57);
+}
+
+.navbar {
+  /* border: 1px solid aliceblue; */
+  flex-direction: column;
+}
+
+nav {
+  margin: 20px 0;
+  text-align: center;
+  justify-content: space-between;
+  /* border: 2px solid goldenrod; */
+}
+
+.logo {
+  width: 170px;
+  overflow: hidden;
+}
+
+.logo img {
+  width: 100%;
+}
+
+.right {
+  padding: 0px;
+}
+
+.lang select {
+  margin-right: 10px;
+  font-size: 16px;
+  font-weight: bolder;
+  background-color: transparent;
+  padding: 4px 30px;
+  border: 1px solid rgb(243, 245, 247);
+  border-radius: 4px;
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.sign button {
+  font-size: 14px;
+  font-weight: bolder;
+  border: none;
+  padding: 7px 16px;
+  background: rgb(229, 9, 20);
+  color: aliceblue;
+  border-radius: 4px;
+  cursor: pointer;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.sign button:hover {
+  background: rgb(236, 5, 16);
+  transition: background 0.3s;
+}
+
+.home {
+  /* border: 2px solid rgb(228, 2, 248); */
+  width: 100%;
+  color: antiquewhite;
+  flex-basis: 50%;
+  display: block;
+  text-align: center;
+  margin: auto;
+  padding: 0;
+  z-index: 1;
+}
+
+.headtitle {
+  margin: auto;
+  padding: 140px 0px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headtitle h1 {
+  font-size: 48px;
+  font-weight: 900;
+}
+
+.headtitle p {
+  margin: 16px 0 0;
+  font-size: 24px;
+  font-weight: 400;
+}
+
+/* ----------- just check ---------------- */
+
+.SusBox {
+  margin: 8px 0 0;
+  text-align: center;
+}
+
+form {
+  padding: 0 32px;
+  text-align: center;
+  box-sizing: border-box;
+  max-width: 985px;
+  margin: 0 auto;
+}
+
+.headtitle form h3 {
+  font-size: 20px;
+  font-weight: inherit;
+  line-height: 1.5;
+  margin-block-start: 16px;
+  margin-block-end: 16px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  text-align: center;
+}
+
+.suscribe {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  text-align: left;
+  margin: 16px auto 0;
+  width: 100%;
+  max-width: 586px;
+}
+
+.suscribe .input-box {
+  flex: 1 1 auto;
+  border: 1px solid rgb(254, 252, 252);
+  z-index: 0;
+  gap: 2px;
+}
+
+.input-box input {
+  width: 100%;
+  font-size: 16px;
+  font-weight: bolder;
+  align-items: center;
+  border-radius: 4px;
+  overflow: hidden;
+  padding: 10px 16px;
+  /* min-height: 14px;
+  min-width: 16px; */
+  line-height: 1.5;
+  border: 0px solid transparent;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: aliceblue;
+  transition: backdrop-filter 0.3s;
+}
+
+.input-box input:hover {
+  backdrop-filter: blur(5px);
+}
+
+.suscribe button {
+  box-sizing: border-box;
+  display: inline-flex;
+  flex: 0 0 auto;
+  margin: 0 0 0 8px;
+  width: auto;
+  text-decoration: none;
+  background: rgb(229, 9, 20);
+  color: aliceblue;
+  border: none;
+  border-radius: 4px;
+  font-size: 24px;
+  font-weight: 500;
+  /* min-height: 56px; */
+  padding: 12px 20px;
+  align-items: center;
+  text-decoration: none;
+  justify-content: center;
+  line-height: 1;
+  cursor: pointer;
+  -webkit-box-align: center;
+}
+.suscribe button i{
+  margin-left: 10px;
+}
+
+/* ------------ next phase ----------- */
+
+section {
+  /* border: 3px solid red; */
+  width: 100%;
+  margin: auto;
+  padding: 72px 0;
+  border-bottom: 8px solid rgb(26, 26, 26);
+}
+
+.BOX {
+  /* border: 3px solid rgb(255, 238, 0); */
+  margin: 0 10%;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.text {
+  flex-basis: 50%;
+  margin: auto;
+  padding-right: 6px;
+  color: aliceblue;
+}
+
+.text h2 {
+  font-weight: 900;
+  text-align: left;
+}
+
+.text p {
+  font-weight: 400;
+  text-align: left;
+}
+.images {
+  flex-basis: 50%;
+  margin: auto;
+}
+.images img {
+  width: 100%;
+}
+
+/* ------------ Frequently Question ----------- */
+
+.faq {
+  /* border: 3px solid rgb(255, 238, 0); */
+  flex-direction: column;
+  display: flex;
+
+}
+.title h2 {
+  align-items: center;
+  text-align: center;
+}
+
+.question-box{
+  margin-top: 24px;
+}
+
+.fqa {
+  padding-bottom: 16px;
+  /* border-bottom: 2px solid aliceblue; */
+  cursor: pointer;
+}
+
+.ques {
+  background-color: rgb(36, 35, 35);
+  display: flex;
+  padding: 24px;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.ques h3 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.ques i {
+  font-size: 25px;
+  font-weight: 100;
+  transition: transform 0.5s ease;
+}
+
+.fqa.active i {
+  transform: rotate(180deg);
+}
+
+.ans {
+  margin-top: 2px;
+  background-color: rgb(59, 59, 59);
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.9s ease;
+}
+
+.ans p {
+  padding-top: 16px;
+  line-height: 1.2;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: inherit;
+  padding: 24px;
+}
+
+.fqa.active .ans {
+  max-height: 1200px;
+  animation: fade 0.5s ease-in-out;
+}
+
+.fqmix{
+  margin-top: 37.6px;
+}
+
+@keyframes fade {
+  0% {
+      opacity: 0;
+      transform: translateY(-10px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+}
+
+/* ------------ Footer page ----------- */
+
+footer {
+  /* border: 3px solid red; */
+  width: 100%;
+  margin: auto;
+  padding: 74px 0 30px;
+}
+.footerbox {
+  /* border: 3px solid rgb(255, 238, 0); */
+  margin: 0 10%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  color: rgb(201, 199, 199);
+  text-align: left;
+}
+.call span {
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+.call span:hover {
+  color: aliceblue;
+}
+.links {
+  padding: 20px 0;
+}
+.links ul {
+  width: 100%;
+  background-color: transparent;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.links ul li {
+  margin: 10px 0;
+  align-items: center;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+.links ul li:hover {
+  color: aliceblue;
+}
+.Name {
+  margin: 20px 0;
+}
+
+/* ----------------- Responsive Setting ----------------- */
+
+@media screen and (max-width: 2560px) {
+  .headtitle {
+    padding: 140px 0px;
+  }
+  section{
+    padding: 72px 0;
+  }
+  .text h2,
+  .title h2{
+    font-size: 48px;
+    font-weight: 900;
+  }
+  .text p{
+    font-size: 24px;
+    font-weight: 400;
+  }
+  .text h2 {
+    font-size: 48px;
+  }
+  
+  .text p {
+    margin: 16px 0 0;
+    font-size: 24px;
+  }
+}
+
+
+@media screen and (max-width: 1250px) {
+  .container {
+    margin: auto 4%;
+    padding: 0;
+  }
+  .BOX,
+  .faq{
+    margin: 0 auto;
+    max-width: calc( 100% - 72px );
+  }
+}
+
+@media screen and (max-width: 961px) {
+  
+  .logo {
+    width: 100px;
+  }
+  .lang select{
+    padding: 4px 10px;
+  }
+  .headtitle {
+    padding: 90px 0px;
+  }
+  .headtitle h1 {
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  .headtitle p {
+    font-size: 18px;
+  }
+
+  .BOX {
+    flex-direction: column;
+  }
+  .reverse{
+    flex-direction: column-reverse;
+  }
+
+  .text h2,
+  .title h2{
+    font-size: 32px;
+    font-weight: 700;
+  }
+  
+  .text p {
+    margin: 16px 0 0;
+    font-size: 18px;
+  }
+
+  .links ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .text h2,
+  .text p{
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 601px) {
+
+  section{
+    padding: 56px 0;
+  }
+  .suscribe {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+  .suscribe .input-box {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 400px) {
+  .links ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 295px) {
+  nav{
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 250px) {
+  .links ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
