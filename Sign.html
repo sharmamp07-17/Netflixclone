@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Sign In</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Netflix Sans, Helvetica Neue, Segoe UI, Roboto, Ubuntu, sans-serif;
+        /* font-size: 16px; */
+        white-space: no-wrap;
+    }
+
+    body {
+        background-color: #000;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    a {
+        text-decoration: none;
+        color: blue;
+        cursor: pointer;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    .header {
+        height: 100%;
+    }
+
+    .imglogo {
+        height: 90px;
+    }
+
+    .img {
+        margin-left: 3%;
+        display: inline-block;
+        line-height: 90px;
+        text-decoration: none;
+        vertical-align: middle;
+    }
+
+    .imglogo img {
+        width: 200px;
+    }
+
+    .signbox {
+        color: #333;
+        /* margin-bottom: 25px; */
+        padding: 0 5%;
+    }
+
+    .itembox {
+        background-color: rgba(0, 0, 0, .75);
+        border-radius: 4px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+        flex-grow: 1;
+    }
+
+    .itembox h1 {
+        color: #fff;
+        font-size: 32px;
+        font-weight: 500;
+        margin-bottom: 28px;
+    }
+
+    h1 {
+        margin: 0 0 10px;
+        padding: 0;
+    }
+
+    button {
+        position: relative;
+        background: #e50914;
+        padding: 16px;
+        color: #fff;
+        border-radius: 4px;
+        font-size: 16px;
+        font-weight: 500;
+        margin: 24px 0 12px;
+        letter-spacing: .1px;
+        text-align: center;
+        text-decoration: none;
+        user-select: none;
+        border: none;
+        vertical-align: middle;
+        cursor: pointer;
+    }
+
+    .input,
+    .pwd {
+        padding-bottom: 16px;
+        max-width: 100%;
+        color: #333;
+    }
+
+    .input input,
+    .pwd input {
+        width: 100%;
+        background-color: #333;
+        border: 0;
+        border-radius: 4px;
+        color: #fff;
+        height: 50px;
+        line-height: 50px;
+        padding: 16px 20px;
+        font-size: 16px;
+    }
+
+    .helpbox {
+        margin-bottom: 25px;
+        display: flex;
+        justify-content: space-between;
+        color: #333;
+        position: relative;
+        align-items: center;
+    }
+
+    .helpbox label,
+    .helpbox p {
+        cursor: pointer;
+    }
+
+    .helpbox .help:hover {
+        text-decoration: underline;
+        transition: text-decoration 0.5s;
+    }
+
+    label {
+        display: flex;
+    }
+
+    label input {
+        margin-right: 10px;
+        background-color: #333;
+        border: none;
+        outline: none;
+    }
+
+    label p {
+        color: #737373;
+    }
+
+
+    .helpbox>p {
+        color: #fff;
+        line-height: 1.2;
+        padding: 0;
+    }
+
+    .new h3 {
+        color: #737373;
+        font-size: 16px;
+        font-weight: 400;
+        margin-top: 16px;
+    }
+
+    .learn {
+        position: relative;
+        text-align: left;
+        color: #737373;
+        font-size: 15px;
+        margin-top: 11px;
+
+    }
+
+    .learn a:hover {
+        color: red;
+        transition: color 0.5s;
+    }
+
+    .fotter {
+        background: rgba(0, 0, 0, .75);
+        color: #757575;
+        font-size: 1em;
+        margin-top: 0;
+        min-width: 190px;
+        padding-bottom: 20px;
+        position: relative;
+        width: 100%;
+    }
+
+    .fotterbox {
+        margin: auto;
+        width: 90%;
+        padding: 30px 0 0;
+    }
+
+    .fotterbox a {
+        text-decoration: none;
+        color: #737373;
+    }
+
+    .fotterbox p {
+        margin: 0 0 30px;
+        padding: 0;
+    }
+
+    .fotterbox ul {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-size: 13px;
+        text-align: left;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* max-width: 1000px; */
+    }
+
+    .fotterbox ul li {
+        min-width: 100px;
+        list-style: none;
+        margin: 0 0 16px 0;
+        padding: 0 22px 0 0;
+        vertical-align: top;
+        width: 25%;
+    }
+
+    /* ul li {
+        list-style: none;
+        margin: 0;
+        display: inline-block;
+        margin-bottom: 16px;
+        min-width: 100px;
+        padding: 0 22px 0 0;
+        vertical-align: top;
+        width: 25%;
+    } */
+
+    li a span {
+        font-size: 13px;
+    }
+
+    .langBox {
+        margin: 20px 0 0;
+        font-size: 16px;
+    }
+
+    .langitem {
+        position: relative;
+        margin: 0;
+        padding: 0;
+        border: none;
+        width: auto;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .select {
+        position: relative;
+        display: inline-block;
+        position: relative;
+        width: 100%;
+        color: #737373;
+    }
+
+    select {
+        margin: 0;
+        padding: 12px 20px;
+        /* padding: 12px 26px 12px 50px; */
+        background-color: #000;
+        border: 1px solid #333;
+        text-indent: 0;
+        line-height: 1.7;
+        font-size: 13px;
+        width: 100%;
+        color: #999;
+    }
+
+    option {
+        font-weight: normal;
+        display: block;
+        white-space-collapse: collapse;
+        text-wrap: nowrap;
+        min-height: 1.2em;
+        padding: 0px 2px 1px;
+        line-height: 1.7;
+    }
+
+
+    @media screen and (max-width: 440px),
+    screen and (orientation: landscape) and (max-width: 700px) {
+        .imglogo img {
+            width: 100px;
+            line-height: 45px;
+        }
+    }
+
+    @media only screen and (min-width: 740px) {
+
+        body {
+            background: linear-gradient(to top,
+                    rgba(0, 0, 0, 0.8) 0,
+                    rgba(0, 0, 0, 0) 60%,
+                    rgba(0, 0, 0, 0.8) 100%), url("https://assets.nflxext.com/ffe/siteui/vlv3/dace47b4-a5cb-4368-80fe-c26f3e77d540/f5b52435-458f-498f-9d1d-ccd4f1af9913/IN-en-20231023-popsignuptwoweeks-perspective_alpha_website_large.jpg");
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .imglogo {
+            background: linear-gradient(180deg, rgba(0, 0, 0, .5) 0, transparent);
+            border-bottom: transparent;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        .signbox {
+            background-color: transparent;
+            margin: 0 auto -236px;
+            max-width: 595px;
+            min-height: 100vh;
+        }
+
+        .signbox:before {
+            content: "";
+            display: block;
+            height: 91px;
+        }
+
+        .signbox:after {
+            content: "";
+            display: block;
+            height: 236px;
+        }
+
+        .itembox {
+            min-height: 660px;
+            margin-bottom: 90px;
+            padding: 60px 68px 40px;
+        }
+
+        .fotterbox {
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+
+        .langitem {
+            max-width: 600px;
+        }
+
+    }
+
+    @media only screen and (min-width: 500px) {
+        .itembox {
+            min-width: 380px;
+        }
+
+        button {
+            display: inline-block;
+            line-height: 1em;
+            padding: 16px;
+            min-height: 37px;
+            min-width: 98px;
+        }
+    }
+
+    @media only screen and (min-width: 360px) {
+        button {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+
+    @media only screen and (max-width: 740px) {
+        .fotterbox ul li {
+            width: 33%;
+        }
+    }
+
+    @media only screen and (max-width: 500px) {
+        .fotterbox ul li {
+            width: 50%;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="header flex">
+
+        <div class="imglogo">
+            <div class="img">
+                <img src="logo.png" alt="">
+            </div>
+        </div>
+
+        <div class="signbox">
+            <div class="itembox">
+
+                <h1>Sign In</h1>
+
+                <form action="#" class="flex">
+
+                    <div class="input">
+                        <input type="email & number" name="email or phone" placeholder="Email or phone number" required>
+                    </div>
+
+                    <div class="pwd">
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+
+                    <button type="submit">Sign In</button>
+
+                    <div class="helpbox">
+
+                        <label>
+                            <input type="checkbox">
+                            <p>
+                                Remember me
+                            </p>
+                        </label>
+
+                        <p class="help">Need Help?</p>
+
+                    </div>
+
+                </form>
+
+
+                <div class="new flex">
+
+                    <h3>New to Netflix?
+                        <span>Sign up now.</span>
+                    </h3>
+
+                    <p class="learn">This page is producted by Google reCAPTCHA to ensure you're not a bot.
+                        <a href="">Learn more.</a>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="fotter">
+            <div class="fotterbox">
+
+                <p>
+                    Question? Call
+                    <a href="tel:000-800-919-1694">000-800-919-1694</a>
+                </p>
+
+                <ul>
+
+                    <li>
+                        <a class="footer-link" href="https://help.netflix.com/support/412">
+                            <span>FAQ</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="footer-link" href="https://help.netflix.com"
+                            placeholder="footer_responsive_link_help">
+                            <span>
+                                Help Centre
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="footer-link" href="https://help.netflix.com/legal/termofuse"
+                            placeholder="footer_responsive_link_help">
+                            <span>
+                                Term of Use
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="footer-link" href="https://help.netflix.com/legal/privacy"
+                            placeholder="footer_responsive_link_help">
+                            <span>Privacy</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="footer-link" href="#" placeholder="footer_responsive_link_help">
+                            <span>Cookie Prefrence</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="footer-link" href="https://help.netflix.com/legal/corpinfo"
+                            placeholder="footer_responsive_link_help">
+                            <span>Corporate Information</span>
+                        </a>
+                    </li>
+
+                </ul>
+
+                <div class="langBox">
+                    <div class="langitem">
+                        <div class="select">
+                           
+                            <select data-uia="language-picker" class="ui-select pad" id="lang-switcher" tabindex="0"
+                            placeholder="lang-switcher">
+                            <option selected="" lang="en" data-country="IN">English</option>
+                                <option lang="hi" data-country="IN">हिन्दी</option>
+                            </select>
+                            
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
